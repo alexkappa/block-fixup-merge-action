@@ -10,7 +10,7 @@ main() {
 
   if [[ "$PR_REF" != "refs/pull/"* ]]; then
     echo "This check works only with pull_request events"
-    exit 1
+    exit 0
   fi
 
   # Using git directly because the $GITHUB_EVENT_PATH file only shows commits in

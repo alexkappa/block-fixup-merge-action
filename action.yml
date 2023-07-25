@@ -1,4 +1,4 @@
-name: 'Block fixup commit merge'
+name: 'Block fixup! commits'
 description: 'Block merge of Pull Requests containing fixup commits, so you do not forget to squash/autosquash.'
 author: 'Brad Erickson'
 runs:
