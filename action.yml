@@ -2,8 +2,11 @@ name: 'Block fixup! commits'
 description: 'Block merge of Pull Requests containing fixup commits, so you do not forget to squash/autosquash.'
 author: 'Brad Erickson'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'composite'
+  steps:
+    - name: Block fixup/squash commits
+      shell: bash
+      run: ${{ github.action_path }}/entrypoint.sh
 branding:
   icon: 'scissors'
   color: 'orange'
